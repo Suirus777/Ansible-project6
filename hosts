@@ -1,0 +1,15 @@
+[app]
+vm3 ansible_host=10.128.0.15 ansible_user=ansible ansible_ssh_private_key_file=/home/ansible/.ssh/id_rsa
+vm2 ansible_host=10.128.0.21 ansible_user=ansible ansible_ssh_private_key_file=/home/ansible/.ssh/id_rsa
+
+[web]
+vm1 ansible_host=127.0.0.1 ansible_connection=local
+
+[database]
+vm1 ansible_host=127.0.0.1 ansible_connection=local
+
+[database:vars]
+postresql_version=14
+postgresql_bin_path=/usr/lib/postgresql/14/bin
+postgresql_data_dir=/var/lib/postgresql/14/main
+ansible_ssh_pipelining=true

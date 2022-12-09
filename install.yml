@@ -1,0 +1,23 @@
+---
+- name: Instll docker on Ubuntu server of vm2
+  hosts: vm2
+  gather_facts: no
+  remote_user: ansible
+  become: yes
+  roles:
+   - docker-ubuntu
+
+- name: Instll docker on CemtOS 8 server of vm3
+  hosts: vm3
+  gather_facts: no
+  remote_user: ansible
+  become: yes
+  roles:
+   - docker-centos
+
+- name: Instll postgressql14 on Ubuntu server of vm1 node
+  hosts: database
+  gather_facts: no
+  become: yes
+  roles:
+   - postgresql
