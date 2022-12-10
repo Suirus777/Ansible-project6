@@ -21,7 +21,8 @@ ansible 2.10.8<br>
 authorized_keys  id_rsa  id_rsa.pub  known_hosts</b> <br>
 
 5. Добавить в inventory информацию о созданных машинах. vm2 и vm3 должны быть в группе app, vm1 — в группе database и web. <br>
-Написать плейбук, реализующий следующее:<br>
+
+6. Написать плейбук, реализующий следующее:<br>
  - на машинах группы app выполняется установка и запуск Docker <br>
    на vm2 был установлен docker <br>
 <b> ansible@vm2:~$ sudo -i <br>
